@@ -16,26 +16,23 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // الذكي: localhost vs Vercel
-  const API_URL =
-    process.env.NODE_ENV === "development"
-      ? "/api/contact"
-      : "https://mmm-smoky-six.vercel.app/api/contact";
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const res = await fetch(API_URL, {
+      // Use absolute URL based on environment
+      const baseUrl =
+        process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
+
+      const res = await fetch(`${baseUrl}/api/contact`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (res.ok) {
         alert("Your request has been sent successfully!");
+        setFormData({ name: "", email: "", phone: "", otpMethod: "email" });
       } else {
         alert("Something went wrong, please try again.");
       }
@@ -46,7 +43,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 sm:px-6">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row w-full max-w-5xl bg-white shadow-lg rounded-lg p-6 lg:p-10">
         {/* Left side title */}
         <div className="lg:w-1/3 flex items-start mb-6 lg:mb-0">
