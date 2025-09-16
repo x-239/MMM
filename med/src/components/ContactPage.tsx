@@ -13,20 +13,20 @@ const ContactPage = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    // منع أي شيء غير رقم في حقل الهاتف
-    if (e.target.name === "phone") {
-      const value = e.target.value.replace(/\D/g, "");
-      setFormData({ ...formData, phone: value });
-    } else {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  // الذكي: localhost vs Vercel
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "/api/contact"
+      : "https://mmm-smoky-six.vercel.app/api/contact";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,41 +34,29 @@ const ContactPage = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!res.ok) {
-        const errorData = await res.json().catch(() => ({}));
-        console.error("Error response:", errorData);
+      if (res.ok) {
+        alert("Your request has been sent successfully!");
+      } else {
         alert("Something went wrong, please try again.");
-        return;
       }
-
-      alert("Your request has been sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        otpMethod: "email",
-      });
     } catch (error) {
-      console.error("Error sending request:", error);
-      alert("Error sending your request. Check your internet connection.");
+      console.error("Error:", error);
+      alert("Error sending your request.");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-20">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 sm:px-6">
       <div className="flex flex-col lg:flex-row w-full max-w-5xl bg-white shadow-lg rounded-lg p-6 lg:p-10">
         {/* Left side title */}
-        <div className="w-full lg:w-1/3 flex items-start mb-6 lg:mb-0">
+        <div className="lg:w-1/3 flex items-start mb-6 lg:mb-0">
           <h1 className="text-4xl sm:text-5xl font-bold text-sky-600">
             Contact Us
           </h1>
         </div>
 
         {/* Right side form */}
-        <form
-          onSubmit={handleSubmit}
-          className="w-full lg:w-2/3 lg:pl-10 flex flex-col"
-        >
+        <form onSubmit={handleSubmit} className="lg:w-2/3 lg:pl-10 w-full">
           <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
 
           <input
@@ -94,37 +82,35 @@ const ContactPage = () => {
           <input
             type="tel"
             name="phone"
+            pattern="[0-9]*"
+            inputMode="numeric"
             placeholder="Your Phone Number"
             value={formData.phone}
             onChange={handleChange}
             className="w-full mb-4 p-3 border rounded-lg"
-            inputMode="numeric"
-            pattern="[0-9]*"
             required
           />
 
           {/* OTP Method */}
-          <div className="mb-6 flex flex-col sm:flex-row sm:items-center">
-            <label className="mr-4 mb-2 sm:mb-0">
+          <div className="mb-6 flex flex-col sm:flex-row gap-4">
+            <label className="flex items-center gap-2">
               <input
                 type="radio"
                 name="otpMethod"
                 value="email"
                 checked={formData.otpMethod === "email"}
                 onChange={handleChange}
-                className="mr-2"
                 required
               />
               OTP via Email
             </label>
-            <label>
+            <label className="flex items-center gap-2">
               <input
                 type="radio"
                 name="otpMethod"
                 value="phone"
                 checked={formData.otpMethod === "phone"}
                 onChange={handleChange}
-                className="mr-2"
               />
               OTP via Phone
             </label>
