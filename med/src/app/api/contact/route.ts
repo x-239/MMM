@@ -1,26 +1,30 @@
-import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const { name, email, phone, otpMethod } = body;
+    const data = await req.json();
 
-    // ⚡ Gmail setup with App Password
+    const { name, email, phone, otpMethod } = data;
+
+    // Create Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com", // أو outlook: smtp.office365.com
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
+    // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, 
-      subject: "New Contact Request",
+      from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER, // ممكن تغير للإيميل اللي بدك توصله الرسائل
+      subject: `New Contact Request from ${name}`,
       html: `
-        <h2>New Client Contact Request</h2>
+        <h2>New Contact Request</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
@@ -28,13 +32,14 @@ export async function POST(req: Request) {
       `,
     };
 
+    // Send the email
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: "Contact request sent successfully!" });
+    return NextResponse.json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { message: "Failed to send contact request" },
+      { message: "Failed to send email", error },
       { status: 500 }
     );
   }
