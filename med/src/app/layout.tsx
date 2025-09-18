@@ -21,8 +21,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Something",
-  description: "The best website for medical assetnce",
+  title: "ملهم خدمات المساندة الادارية",
+  description: "The Best Website For Administrative support services",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full scroll-smooth">
       <body
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >

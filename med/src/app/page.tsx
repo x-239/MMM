@@ -85,7 +85,8 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
       <Services />
-      <AboutUs />
+      {/* TODO: until uncle awad take the lead on making this page */}
+      {/* <AboutUs /> */}
       <ContactPage />
     </>
   );

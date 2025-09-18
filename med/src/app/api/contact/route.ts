@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     // Email content
     const mailOptions = {
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // ممكن تغير للإيميل اللي بدك توصله الرسائل
+      to: process.env.EMAIL_USER,
       subject: `New Contact Request from ${name}`,
       html: `
         <h2>New Contact Request</h2>

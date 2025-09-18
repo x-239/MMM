@@ -3,25 +3,73 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-shrink-0">
+    <div className="container mx-auto px-4 py-12">
+      {/* العنوان الرئيسي */}
+      <h1 className="font-semibold text-3xl md:text-4xl text-center mb-10">
+        About Us
+      </h1>
+
+      <div className="flex flex-col md:flex-row items-start gap-8">
+        {/* الصورة */}
+        <div className="flex-shrink-0 w-full md:w-1/2">
           <Image
             src="/images/about.jpg"
             alt="about"
             width={800}
             height={600}
-            className="rounded"
+            className="rounded-lg shadow-md object-cover w-full"
           />
         </div>
-        <div className="flex-1">
-          <h1 className="text-2xl font-semibold mb-2">About</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-            praesentium unde cumque distinctio rerum impedit sapiente ipsum
-            reiciendis adipisci, doloribus beatae doloremque voluptatem est
-            optio itaque animi. Atque, voluptas laboriosam?
-          </p>
+
+        {/* النصوص */}
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Section 1 */}
+          {/* <div>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              1. خدمات الدعم المكتبي والاداري
+            </h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>ادارة المكاتب والاعمال الادارية للشركات.</li>
+              <li>خدمات السكرتارية الافتراضية</li>
+
+              <li>اعداد الملفات والتقارير الادراية</li>
+            </ul>
+          </div> */}
+
+          {/* Section 2 */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              1. خدمات التنسيق والدعم
+            </h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>تنسيق المواعيد الطبية (بدون نقل او علاج).</li>
+              <li>خدمات الوساطة الادارية او متابعة معاملات لدى جهات اخرى</li>
+              <li>تنظيم المواعيد والجدولة</li>
+            </ul>
+          </div>
+
+          {/* Section 3 */}
+          {/* <div>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              3. خدمات المساندة التشغيلية
+            </h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>تزويد الشركات بالعمالة المؤقته (ادارية , تشغيلية)</li>
+              <li>مراكز الاتصال وخدمة العملاء بالنيابة.</li>
+              <li>ادارة عمليات الدعم اللوجستي الاداري.</li>
+            </ul>
+          </div> */}
+
+          {/* Section 4 */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              2. الاستشارات الادارية البسيطة
+            </h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>استشارات في ادارة المكاتب او التنظيم الاداري</li>
+              <li>خدمات المساندة الادارية</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

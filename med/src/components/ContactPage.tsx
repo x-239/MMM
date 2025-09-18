@@ -88,31 +88,6 @@ const ContactPage = () => {
             required
           />
 
-          {/* OTP Method */}
-          <div className="mb-6 flex flex-col sm:flex-row gap-4">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="otpMethod"
-                value="email"
-                checked={formData.otpMethod === "email"}
-                onChange={handleChange}
-                required
-              />
-              OTP via Email
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="otpMethod"
-                value="phone"
-                checked={formData.otpMethod === "phone"}
-                onChange={handleChange}
-              />
-              OTP via Phone
-            </label>
-          </div>
-
           <button
             type="submit"
             className="w-full bg-sky-500 text-white py-3 rounded-lg hover:bg-sky-600 text-lg font-medium"
@@ -120,6 +95,30 @@ const ContactPage = () => {
             Send Request
           </button>
         </form>
+        {/* OTP Method */}
+        {/* <div className="mb-6 flex flex-col sm:flex-row gap-4">
+          <label className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="otpMethod"
+              value="email"
+              checked={formData.otpMethod === "email"}
+              onChange={handleChange}
+              required
+            />
+            OTP via Email
+          </label>
+          <label className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="otpMethod"
+              value="phone"
+              checked={formData.otpMethod === "phone"}
+              onChange={handleChange}
+            />
+            OTP via Phone
+          </label>
+        </div> */}
       </div>
     </div>
   );
