@@ -44,14 +44,11 @@ export default function Home() {
           <p className="mt-6 text-lg max-w-prose text-gray-600/65 ">
             Need help?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6 ">
             <Link href="/products" className={buttonVariants()}>
               Contact Us
             </Link>
-            <Button
-              variant="ghost"
-              className="hover:bg-gray-100 cursor-pointer"
-            >
+            <Button className="hover:bg-[#F8A53B] bg-[#42C2B5] cursor-pointer">
               Book Now! &rarr;
             </Button>
           </div>
