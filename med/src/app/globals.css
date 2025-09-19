@@ -3,47 +3,75 @@
 
 :root {
   --radius: 0.65rem;
+
+  /* الخلفيات والنصوص */
   --background: 0 0% 100%;
-  --foreground: 240 10% 10%;
+  --foreground: 210 15% 10%;
   --card: 0 0% 100%;
-  --card-foreground: 240 10% 10%;
+  --card-foreground: 210 20% 95%;
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 10%;
-  --primary: 270 60% 50%;
-  --primary-foreground: 270 100% 100%;
-  --secondary: 240 5% 95%;
-  --secondary-foreground: 240 10% 30%;
-  --muted: 240 5% 95%;
-  --muted-foreground: 240 10% 50%;
-  --accent: 270 5% 95%;
-  --accent-foreground: 270 10% 30%;
+  --popover-foreground: 210 20% 95%;
+
+  /* الألوان الأساسية */
+  --primary: 210 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 20% 95%;
+  --secondary-foreground: 210 10% 30%;
+  --muted: 210 20% 95%;
+  --muted-foreground: 210 15% 50%;
+  --accent: 210 10% 90%;
+  --accent-foreground: 210 10% 30%;
   --destructive: 0 80% 50%;
-  --border: 240 5% 90%;
-  --input: 240 5% 90%;
-  --ring: 270 60% 50%;
+
+  /* حدود ومدخلات */
+  --border: 210 10% 90%;
+  --input: 210 10% 90%;
+  --ring: 210 100% 50%;
+
+  /* sidebar */
+  --sidebar: 210 5% 98%;
+  --sidebar-foreground: 210 15% 10%;
+  --sidebar-primary: 210 100% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 10% 90%;
+  --sidebar-accent-foreground: 210 10% 30%;
+  --sidebar-border: 210 10% 90%;
+  --sidebar-ring: 210 100% 50%;
 }
 
 .dark {
-  --background: 240 10% 10%;
+  --background: 210 15% 10%;
   --foreground: 0 0% 95%;
-  --card: 240 10% 20%;
+  --card: 210 10% 20%;
   --card-foreground: 0 0% 95%;
-  --popover: 240 10% 20%;
+  --popover: 210 10% 20%;
   --popover-foreground: 0 0% 95%;
-  --primary: 270 60% 50%;
-  --primary-foreground: 0 0% 95%;
-  --secondary: 240 5% 20%;
+
+  --primary: 210 90% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 10% 20%;
   --secondary-foreground: 0 0% 95%;
-  --muted: 240 5% 20%;
-  --muted-foreground: 240 10% 50%;
-  --accent: 270 5% 20%;
+  --muted: 210 10% 20%;
+  --muted-foreground: 210 15% 50%;
+  --accent: 210 10% 20%;
   --accent-foreground: 0 0% 95%;
   --destructive: 0 80% 50%;
-  --border: 240 5% 10%;
-  --input: 240 5% 15%;
-  --ring: 270 60% 50%;
+
+  --border: 210 10% 10%;
+  --input: 210 10% 15%;
+  --ring: 210 90% 50%;
+
+  --sidebar: 210 10% 20%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 210 90% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 10% 20%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-border: 210 10% 10%;
+  --sidebar-ring: 210 90% 50%;
 }
 
+/* كلاس للثيمات */
 .bg-primary {
   background-color: hsl(var(--primary));
 }
@@ -74,4 +102,9 @@
 
 .rounded-lg {
   border-radius: var(--radius);
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
