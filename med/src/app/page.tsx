@@ -86,8 +86,8 @@ export default function Home() {
         <Services />
       </section>
       {/* About Section */}
-      <section id="AboutUs">
-     {/* <AboutUs /> */}
+      <section id="WhatWeDo">
+     <AboutUs />
       </section>
       {/* Contact Section */}
       <section id="ContactPage">
