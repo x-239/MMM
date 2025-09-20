@@ -15,12 +15,21 @@ const Navbar = () => {
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-2">
+
+              <Link
+                href="/"
+                className="flex items-center gap-2"
+                // style={{ background: "#fff", padding: "10px" }}
+              >
                 <Image
-                  src="/images/logoo.png"
+                  src="/images/logo.png"
                   alt="logoImage"
                   height={120}
                   width={120}
+                  // style={{
+                  //   background: "transparent",
+                  //   display: "block",
+                  // }}
                 />
               </Link>
               {/* Navigation */}

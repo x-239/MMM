@@ -26,12 +26,12 @@ export default function Home() {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
-    {
-      name: "Medical Travel with Lesure Packages",
-      Icon: CalendarDays,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
-    },
+    // {
+    //   name: "Medical Travel with Lesure Packages",
+    //   Icon: CalendarDays,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
+    // },
   ];
   return (
     <>
@@ -72,9 +72,9 @@ export default function Home() {
                   <h3 className="text-base font-medium text-blue-950">
                     {perk.name}
                   </h3>
-                  <p className="text-sm mt-4 font-bold sm:shadow-sm md:shadow lg:shadow">
+                  {/* <p className="text-sm mt-4 font-bold sm:shadow-sm md:shadow lg:shadow">
                     {perk.description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))}
