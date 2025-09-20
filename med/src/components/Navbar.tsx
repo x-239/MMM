@@ -5,7 +5,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import Link from "next/link";
 import { Icons } from "./Icons";
 import NavItems from "./NavItems";
-
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -16,9 +16,13 @@ const Navbar = () => {
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-2">
-                <Icons.logo className="h-10 w-10" />
+                <Image
+                  src="/images/logoo.png"
+                  alt="logoImage"
+                  height={120}
+                  width={120}
+                />
               </Link>
-
               {/* Navigation */}
               <NavItems />
             </div>
