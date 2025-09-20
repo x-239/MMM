@@ -12,13 +12,13 @@ const Footer: React.FC = () => {
           <h2 className="text-lg font-semibold mb-4">تواصل معنا</h2>
           <div className="flex items-center gap-2 mb-2">
             <MdEmail className="text-xl" />
-            <a href="mailto:info@mtjrthaki.com" className="hover:text-white">
+            <a href="mailto:lilsenbi01@gmail.com" className="hover:text-white">
               lilsenbi01@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
             <MdPhone className="text-xl" />
-            <a href="tel:+966598985017" className="hover:text-white">
+            <a href="tel:+962797743569" className="hover:text-white">
               +962797743569
             </a>
           </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Payment Methods */}
-        <div>
+        {/* <div>
           <h2 className="text-lg font-semibold mb-4">طرق الدفع</h2>
           <div className="flex items-center gap-4 text-3xl">
             <FaCcVisa />
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             <FaCcApplePay />
             <Image src="/images/stc.png" alt="STC PAY" height={90} width={90} />
           </div>
-        </div>
+        </div>*/}
       </div>
 
       {/* Bottom */}
