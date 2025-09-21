@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 const navbarItems = [
   { name: "About", href: "/about" },
   { name: "Contact Us", href: "/contact" },
-  { name: "What We Do", href: "#WhatWeDo" },
-  { name: "Services", href: "#Services" },
+  { name: "What We Do", href: "/#WhatWeDo" },
+  { name: "Services", href: "/#Services" },
 ];
 
 const NavItems = () => {
