@@ -5,8 +5,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navbarItems = [
-  { name: "About", href: "#AboutUs" },
-  { name: "Contact Us", href: "#ContactPage" },
+  { name: "About", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
   { name: "What We Do", href: "#WhatWeDo" },
   { name: "Services", href: "#Services" },
 ];
@@ -22,7 +22,7 @@ const NavItems = () => {
           <Link
             key={key}
             href={nav.href}
-            className="text-gray-800 hover:text-sky-600"
+            className="text-white hover:text-[#F8A53B]"
           >
             {nav.name}
           </Link>

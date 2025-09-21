@@ -1,21 +1,20 @@
 import AboutUs from "@/components/AboutUs";
-import ContactPage from "@/components/ContactPage";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Services from "@/components/Services";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { CalendarDays, Handshake, HeartPlus, Stethoscope } from "lucide-react";
+import { Handshake, HeartPlus, Stethoscope } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   const perks = [
     {
-      name: "Medical Visas",
+      name: "Foreign Airport Transit Assistance",
       Icon: Handshake,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
     {
-      name: "Foreign Airport Transit Assistance",
+      name: "Medical Visas",
       Icon: Stethoscope,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
@@ -26,12 +25,6 @@ export default function Home() {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
-    // {
-    //   name: "Medical Travel with Lesure Packages",
-    //   Icon: CalendarDays,
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
-    // },
   ];
   return (
     <>
@@ -39,18 +32,20 @@ export default function Home() {
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Your one place for Foreign Medical
-            <span className="text-blue-600">Services</span>.
+            <span className="text-[#0077B6]">Services</span>.
           </h1>
           <p className="mt-6 text-lg max-w-prose text-gray-600/65 ">
             Need help?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6 ">
-            <Link href="/products" className={buttonVariants()}>
+            <Link href="/contact">
+              <Button className="hover:bg-[#F8A53B] bg-[#42C2B5] cursor-pointer">
+                Book Now! &rarr;
+              </Button>
+            </Link>
+            <Link href="/contact" className={buttonVariants()}>
               Contact Us
             </Link>
-            <Button className="hover:bg-[#F8A53B] bg-[#42C2B5] cursor-pointer">
-              Book Now! &rarr;
-            </Button>
           </div>
         </div>
         {/* TODO: List Help */}
@@ -72,26 +67,19 @@ export default function Home() {
                   <h3 className="text-base font-medium text-blue-950">
                     {perk.name}
                   </h3>
-                  {/* <p className="text-sm mt-4 font-bold sm:shadow-sm md:shadow lg:shadow">
-                    {perk.description}
-                  </p> */}
                 </div>
               </div>
             ))}
           </div>
         </MaxWidthWrapper>
       </section>
-        {/* Service Section */}
+      {/* Service Section */}
       <section id="Services">
         <Services />
       </section>
       {/* About Section */}
       <section id="WhatWeDo">
-     <AboutUs />
-      </section>
-      {/* Contact Section */}
-      <section id="ContactPage">
-        <ContactPage />
+        <AboutUs />
       </section>
     </>
   );
