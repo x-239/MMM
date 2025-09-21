@@ -10,20 +10,14 @@ export default function Home() {
     {
       name: "Foreign Airport Transit Assistance",
       Icon: Handshake,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
     {
       name: "Medical Visas",
       Icon: Stethoscope,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
     {
       name: "F24-Hrs Dedicated Case Manager",
       Icon: HeartPlus,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus, harum reprehenderit alias error.",
     },
   ];
   return (
