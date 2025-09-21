@@ -1,4 +1,4 @@
-import AboutUs from "@/components/AboutUs";
+// import AboutUs from "@/components/AboutUs";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Services from "@/components/Services";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -78,9 +78,9 @@ export default function Home() {
         <Services />
       </section>
       {/* About Section */}
-      <section id="WhatWeDo">
+      {/* <section id="WhatWeDo">
         <AboutUs />
-      </section>
+      </section> */}
     </>
   );
 }
