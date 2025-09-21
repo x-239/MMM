@@ -43,7 +43,7 @@ export default function Home() {
                 Book Now! &rarr;
               </Button>
             </Link>
-            <Link href="/contact" className={buttonVariants()}>
+            <Link href="tel:+962797743569" className={buttonVariants()}>
               Contact Us
             </Link>
           </div>
