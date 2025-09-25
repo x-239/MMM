@@ -61,7 +61,7 @@ const Services = () => {
       <ServiceCard
         title="Doctor Appointments"
         image="/images/opinion.png"
-        maxLength={200}
+        maxLength={180}
         text="allows patients to schedule a consultation with a physician at a convenient time. It helps ensure timely medical attention and organized patient care. Easy Scheduling: Patients can book appointments online, by phone, or through hospital apps. Time Management: Reduces waiting times and improves clinic flow. Continuity of Care: Ensures follow-up visits and ongoing monitoring for chronic conditions. Patient Convenience: Offers flexible options (in-person or telemedicine). This service is vital for routine checkups, chronic disease follow-ups, and specialist consultations."
       />
 
@@ -82,7 +82,7 @@ const Services = () => {
       <ServiceCard
         title="Follow Up Care"
         image="/images/opinion.png"
-        maxLength={200}
+        maxLength={180}
         text="is the medical care provided to patients after an initial treatment, surgery, or hospital visit. Its main goal is to monitor recovery, prevent complications, and ensure long-term health. Monitoring Progress: Checking the patient’s healing, response to medication, or lifestyle changes. Early Detection: Identifying possible side effects or complications before they get worse. Continuity of Care: Maintaining a connection between the patient and healthcare team. Patient Education: Guiding patients about medication use, diet, exercise, and warning signs. Improved Outcomes: Increases the chances of full recovery and reduces hospital readmissions. This service is especially important for patients after surgeries, chronic disease management, or long-term therapies."
       />
 
