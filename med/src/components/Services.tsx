@@ -74,21 +74,21 @@ const Services = () => {
 
       <ServiceCard
         title="Custom Packages"
-        image="/images/custom.png"
+        image="/images/opinion.png"
         maxLength={200}
         text="are personalized healthcare or service bundles designed to meet the specific needs of patients, families, or organizations. Instead of a 'one-size-fits-all' approach, the services are tailored to match individual requirements. Personalized Care: Packages may include checkups, lab tests, or treatments based on the patient’s health profile. Flexibility: Clients can choose services they need (e.g., maternity, chronic disease management, wellness programs). Cost-Effective: Bundling services often lowers overall expenses compared to paying for each service separately. Convenience: Provides an organized, all-in-one solution for patients or companies. This service is especially valuable for corporate health plans, family health coverage, and patient-specific care needs."
       />
 
       <ServiceCard
         title="Follow Up Care"
-        image="/images/follow.png"
+        image="/images/opinion.png"
         maxLength={200}
         text="is the medical care provided to patients after an initial treatment, surgery, or hospital visit. Its main goal is to monitor recovery, prevent complications, and ensure long-term health. Monitoring Progress: Checking the patient’s healing, response to medication, or lifestyle changes. Early Detection: Identifying possible side effects or complications before they get worse. Continuity of Care: Maintaining a connection between the patient and healthcare team. Patient Education: Guiding patients about medication use, diet, exercise, and warning signs. Improved Outcomes: Increases the chances of full recovery and reduces hospital readmissions. This service is especially important for patients after surgeries, chronic disease management, or long-term therapies."
       />
 
       <ServiceCard
         title="Global Medical Care Booking"
-        image="/images/global.png"
+        image="/images/opinion.png"
         maxLength={200}
         text="is a service that helps patients arrange medical treatment in hospitals or clinics abroad. It connects patients with international healthcare providers for specialized or advanced care. Access to Advanced Care: Patients can book treatment in leading hospitals worldwide. Specialized Services: Includes complex surgeries, cancer care, fertility treatment, or rare disease management. Travel Assistance: Support with visas, flight bookings, and accommodation near the hospital. Language & Cultural Support: Interpretation services and cultural guidance for a smoother experience. Seamless Coordination: Ensures communication between local doctors and international specialists for continuity of care. This service is valuable for patients seeking high-quality, specialized, or cost-effective treatments not available in their home country."
       />

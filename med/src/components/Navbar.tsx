@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import Link from "next/link";
 import NavItems from "./NavItems";
@@ -14,7 +13,6 @@ const Navbar = () => {
           <div>
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
-
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/images/logo.png"
